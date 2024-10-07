@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 2px dotted #000000;*/
+    width: 50%;
+    padding: 1%;
+    margin-left: .5rem;
+}
+
+.playlistInput {
+    width: 100%;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: 0.125rem solid rgb(64, 163, 163);
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    background-color: rgb(40, 40, 40);
+    &:hover {
+        background-color: rgb(50, 50, 50);
+    }
+    &:focus {
+        outline: 0;
+        background-color: rgb(50, 50, 50);
+        border-bottom: 0.125rem dotted rgb(64, 163, 163);
+    }
+    &:focus::placeholder { /* Clears the placeholder text when the input is focused */
+        color: transparent;
+    }
+}
+
+.button {
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 1.5rem;
+    width: 50%;
+    min-width: auto;
+    border: none;
+    background-color: rgb(64, 163, 163);
+    margin-top: 2rem;
+    &:hover {
+        background-color: rgb(58, 148, 148);
+        cursor: pointer;
+    }
+    &:active {
+        box-shadow: inset 0px 0px 3px 2px rgb(25, 70, 70);
+    }
+}
