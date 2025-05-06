@@ -18,7 +18,6 @@ const Playlist = (props) => {
             tracks={props.playlistTracks}
             onPlaylist={true}
             removeTrack={props.removeTrack}
-            preview={props.preview}
             />
             
             <button

@@ -1,9 +1,9 @@
 .container {
-    /*border: 2px dotted #000000;*/
     display: flex;
     padding: 0.25rem;
     margin-top: .4rem;
     background-color: rgb(50, 50, 50);
+    width: 100%;
 }
 
 .text {

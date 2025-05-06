@@ -4,7 +4,6 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
 import LoginLogoutButtons from '../LoginLogout/LoginLogout';
-import Player from '../Player/Player';
 import resources from '../../api/Spotify';
 
 const {
@@ -25,7 +24,6 @@ const App = () => {
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [playlistName, setPlaylistName] = useState('');
   const [choice, setChoice] = useState("name"); //This selects what content the user is searching for artist song, name or album
-  const [songPreview, setSongPreview] = useState(''); //This sets the preview url for the preview player
 
   const handleChange = ({target}) => {
       setSearch(target.value);
@@ -37,10 +35,6 @@ const App = () => {
 
   const handlePlaylistName = ({target}) => {
     setPlaylistName(target.value);
-  };
-
-  const handleSongPreview = (song) => {
-    setSongPreview(song);
   };
 
   const handleSearch = (event) => {
@@ -59,7 +53,6 @@ const App = () => {
             artist: result.artists[0].name,
             album: result.album.name,
             uri: result.uri,
-            preview: result.preview_url,
             artwork: result.album.images[0].url
           })))
       });
@@ -71,7 +64,6 @@ const App = () => {
             artist: result.artists[0].name,
             album: result.album.name,
             uri: result.uri,
-            preview: result.preview_url,
             artwork: result.album.images[0].url
           })));
         });
@@ -83,7 +75,6 @@ const App = () => {
           artist: result.artists[0].name,
           album: result.album.name,
           uri: result.uri,
-          preview: result.preview_url,
           artwork: result.album.images[0].url
         })));
       });
@@ -162,7 +153,6 @@ const App = () => {
             <SearchResults 
             userSearch={selected}
             addTrack={addTrack}
-            preview={handleSongPreview}
             />
 
             <Playlist
@@ -172,13 +162,9 @@ const App = () => {
             onChange={handlePlaylistName}
             playlistName={playlistName}
             onClick={handleSubmitPlaylist}
-            preview={handleSongPreview}
             />
           </div>
         </div>
-        <Player
-        previewLink={songPreview}
-        />
       </>
     );
   }
