@@ -72,5 +72,9 @@
 @media only screen and (max-width: 479px) {
     .input {
         width: 90%;
-    }  
+    }
+
+    .button {
+        color: rgb(40, 40, 40);
+    }
   }
