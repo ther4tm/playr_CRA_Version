@@ -1,4 +1,5 @@
 .container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,3 +47,11 @@
         box-shadow: inset 0px 0px 3px 2px rgb(25, 70, 70);
     }
 }
+
+/* Mobile styling */
+
+@media only screen and (max-width: 479px) {
+    .button {
+        width: 80%;
+    }  
+  }

@@ -70,3 +70,21 @@
         background-color: rgb(64, 163, 163);
     }
 }
+
+/* Mobile styling */
+
+@media only screen and (max-width: 479px) {
+    .top {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .addremove {
+        width: 20%;
+    }
+
+    .bottomleft, .bottomright {
+        width: 100%;
+    }
+  }
