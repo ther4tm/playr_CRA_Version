@@ -3,6 +3,10 @@
     color: rgb(255, 255, 255);
 }
 
+.buttonContainer {
+    width: 100%;
+}
+
 .loginButton {
     font-family: Poppins;
     font-size: 1.5rem;
@@ -51,3 +55,20 @@
     align-items: flex-end;
     justify-content: flex-start;
 }
+
+/* Mobile styling */
+
+@media only screen and (max-width: 479px) {
+      .info {
+        right: 0rem;
+        align-items: center;
+        font-size: 0.8rem;
+        width: 100%;
+      }
+
+      .button {
+        font-size: 0.8rem;
+        margin-top: 0rem;
+        width: 9rem;
+      }
+  }
