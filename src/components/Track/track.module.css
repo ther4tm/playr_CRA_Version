@@ -31,7 +31,7 @@
     font-family: Poppins;
     font-size: 1rem;
     color: rgb(64, 163, 163);
-    width: 80%;
+    width: 90%;
     overflow: hidden; /* Can be changed to scroll if you want to scroll sideways to see the text */
     white-space: nowrap; /* This prevents the text from going onto a second line */
 }
